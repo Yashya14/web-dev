@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Face</title>
+    <style>
+      .outer {
+        width: 400px;
+        height: 400px;
+        background-color: rgb(255, 255, 2);
+        border-radius: 50%;
+        
+      }
+      .inner1{
+        background-color: black;
+        width: 60px;
+        height: 60px;
+        border-radius:50% ;
+        position: absolute;
+        top: 100px;
+        left: 100px; 
+      }
+      .inner2{
+        background-color: black;
+        width: 60px;
+        height: 60px;
+        border-radius:50% ;
+        position: absolute;
+        top: 100px;
+        left: 250px; 
+      }
+
+      #mouth{
+        background-color: brown;
+        height: 75px;
+        width: 200px;
+        border-radius: 0 0 50px 50px;
+        position: absolute;
+        top: 250px;
+        left: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+        <div id="mouth"></div>
+        <div class="eye">
+            <div class="inner1"></div>
+            <div class="inner2"></div>
+
+        </div>
+    </div>
+  </body>
+</html>
