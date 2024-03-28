@@ -1,0 +1,64 @@
+/* h2{
+    color: orange;
+}
+
+p{
+    background-color: black;
+    color: white;
+}
+
+button{
+    background-color: blue;
+    color: white;
+}
+
+h1{
+    font-family: League spartan;
+    color: #ffa511;
+    text-align: center;
+    font-size: 55px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    text-decoration: teal double underline;
+    text-transform: uppercase;
+} */
+
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p{
+    color: #a52a2a;
+    line-height: 30px;
+}
+
+h1,h3,p,h4{
+    text-align: center;
+}
+
+h1{
+    color: red;
+    /* text-decoration: underline; */
+}
+h3{
+    color: black;
+}
+
+a{
+    color: green;
+    text-decoration: none;
+}
+
+button{
+    background-color: white;
+    color: blueviolet;
+}
+
+textarea{
+    color: #000000;
+}
+
+span{
+    text-decoration: underline;
+}

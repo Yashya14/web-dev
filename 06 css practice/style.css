@@ -1,0 +1,95 @@
+h3{
+    background-color: antiquewhite !important;
+}
+
+*{
+    font-family: monospace;
+}
+
+h1 ,h3 {
+    color: #b9301b;
+}
+
+#signup {
+    color: white;
+    background-color: #b9301b;
+}
+
+.follow{
+    text-decoration: none;
+    color: #490cf0;
+}
+
+.upvote{
+    background-color: rgb(13, 104, 13);
+    color: white;
+}
+
+/* child combinator1 */
+div > input{
+    background-color: darksalmon;
+}
+
+input[type="text"]{
+    color:#f904bc;
+}
+
+/* input[type]{
+    background-color: black;
+} */
+
+#myId{
+    color: rgb(0, 17, 255);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* dedcendent selector - selects all paragraphs inside rows */
+div p{
+    background-color: aquamarine;
+}
+
+p + h3{
+    text-decoration: underline;
+}
+
+.upvote + button{
+    background-color: #490cf0;
+    color: wheat;
+}
+
+input[type="password"]{
+    background-color: #2c5f4f;
+}
+
+button:hover{
+    background-color: blue;
+}
+
+button:active{
+    background-color: #b9301b;
+}
+
+input[type="radio"]:checked + label{
+    color: red;
+    font-weight: bold;
+}
+
+h1::first-letter{
+    color: black;
+}
+
+/* p::first-line{ */
+    /* color: chartreuse; */
+    /* background-color: #2c5f4f; */
+/* } */
+
+p:nth-of-type(1){
+    color:rgb(41, 55, 145);
+}
+p::selection{
+    color: aqua;
+    background-color: black;
+}
+
+/* inline style > id > class > element  */
