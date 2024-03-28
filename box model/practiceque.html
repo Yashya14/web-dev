@@ -29,6 +29,26 @@
       li {
         display: inline;
       }
+
+      .inner{
+        height: 100px;
+        width: 100px;
+        background-color: rgba(42, 255, 4, 0.864);
+        margin: 0 auto;
+        transition: margin-top 2s ease-in-out 0.2s;
+    }
+    
+    /* transitions : enable you to define transition between two state */
+    
+    .inner:hover{
+        background-color: rgb(255, 0, 230);
+        margin-top: 200px;
+        /* transform: rotate(45deg); */
+        /* transition: 1s ease-in-out 1s; */
+        /* transition-duration: 1s;
+        transition-delay: 1s;
+        border-radius: 50%; */
+      }
     </style>
   </head>
   <body>
@@ -56,6 +76,10 @@
     </ul>
     <!-- Li (list items) have their display property set to “list-item” by default which makes them a bulleted list item. -->
     <!-- When this property is reset by you to “inline”, then the bullet points also disappear. In a way, we override the default settings with our CSS. -->
+
+    <div class="inner">
+
+    </div>
   </body>
 </html>
  
