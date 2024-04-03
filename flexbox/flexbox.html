@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox layout</title>
+    <style>
+      .container {
+        height: 400px;
+        width: 400px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /* align-items: center; */
+        justify-content: space-evenly;
+        border: 2px solid green;
+        text-align: center;
+        border-radius: 15px;
+      }
+
+      .child {
+        height: 100px;
+        width: 100px;
+        background-color: grey;
+        font-size: 50px;
+        padding: 2px;
+        margin: 10px;
+        border-radius: 10px;
+      }
+
+      
+      
+      .outer{
+          display: flex;
+          justify-content: flex-start;
+          align-content: center;
+          height: 50px;
+          width: 900px;
+          border: 2px solid green;
+          border-radius: 5px;
+          background-color: chocolate;
+          list-style: none;
+        /* font-size: 24px; */
+        
+    }
+    .inner{
+      height: 50px;
+      width: 80px;
+      border-radius: 10px;
+      margin-left: 5px;
+      font-size: 24px;
+      line-height: 50px;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="child">A</div>
+      <div class="child">B</div>
+      <div class="child">C</div>
+      <div class="child">D</div>
+      <div class="child">E</div>
+      <div class="child">F</div>
+      <div class="child">G</div>
+      <div class="child">H</div>
+      <div class="child">I</div>
+    </div>
+    <hr>
+
+        <ul class="outer">
+            <li class="inner">Logo</li>
+            <li class="inner">Home</li>
+            <li class="inner">About</li>
+            <li class="inner">Contact</li>
+        </ul>
+  
+  </body>
+</html>
