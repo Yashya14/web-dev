@@ -416,3 +416,17 @@ a{
     -o-border-radius: 50%;
     margin-top: -6px;
 }
+
+@media (max-width: 1000px){
+    .controls,.album{
+        display: none;
+    }
+}
+
+@media (max-width: 1000px){
+    .music-player{
+        align-items: center;
+        justify-content: center;
+    }
+}
+
