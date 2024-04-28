@@ -88,14 +88,18 @@ let n = 3;
 let ans = arr.slice(0, n);
 console.log(ans);
 
-// que 2
+// Qs2. Write a JavaScript program to get the last n elements of an array. [n can be any
+// positive number].
+// For example: for array [7, 9, 0, -2] and n=3
+// Print, [9, 0, -2]
+
 let arr1 = [7, 9, 0, -2];
 let nums = 3;
 
 let result = arr1.slice(arr.length - nums);
 console.log(result);
 
-// que 3
+// Qs3. Write a JavaScript program to check whether a string is blank or not.
 
 let str1 = prompt("Please enter your string : ");
 
@@ -105,7 +109,7 @@ if (str1.length == 0) {
   console.log("string is not empty");
 }
 
-// que 4
+// Qs4. Write a JavaScript program to test whether the character at the given (character) index is lower case.
 
 let str2 = "YaShpAl";
 let index = 3;
@@ -116,17 +120,18 @@ if (str2[index] == str2[index].toLocaleLowerCase()) {
   console.log("character is not lowercase");
 }
 
-// que 5
+// Qs5. Write a JavaScript program to strip leading and trailing spaces from a string.
 
 let str3 = prompt("please enter your string : ");
 console.log(`your string = ${str3}`);
 console.log(`string without spaces is ${str3.trim()}`);
 
-// que 6
+// Qs6. Write a JavaScript program to check if an element exists in an array or not.
 
 let arrs = ["a", "b", "c", 23, 67, 34, -5];
 let item = 34;
 if (arrs.indexOf(item) != -1) {
+  // here -1 menas not present (boolean value returns if not present)
   console.log("element exist in array");
 } else {
   console.log("not exist element");
