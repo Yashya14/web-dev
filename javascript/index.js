@@ -1,4 +1,6 @@
-// que 1
+//? Qs1. Write a JS program to delete all occurrences of element ‘num’ in a given array.
+// Example : if arr = [1, 2, 3, 4, 5, 6, 2, 3] & num = 2
+// Result should be arr = [1, 3, 4, 5, 6, 3]
 
 let arr = [1, 2, 3, 4, 5, 6, 2, 3];
 let num = 2;
@@ -11,7 +13,8 @@ for (let i = 0; i < arr.length; i++) {
 
 console.log(arr);
 
-// qure 2
+//? Qs2. Write a JS program to find the no of digits in a number.
+// Example : if number = 287152, count = 6
 
 let number = 287152;
 let count = 0;
@@ -24,7 +27,8 @@ while (copy > 0) {
 }
 console.log(count);
 
-// que 3
+//? Qs3. Write a JS program to find the sum of digits in a number.
+// Example : if number = 287152, sum = 25
 
 let number1 = 287152;
 let sum = 0;
@@ -37,7 +41,8 @@ while (copy1 > 0) {
 }
 console.log(sum);
 
-// que 4
+//? Qs4. Print the factorial of a number n.
+// [Factorial of a number n is the product of all positive integers less than or equal to a given positive integer and denoted by that integer. ]
 
 let n = 5;
 let factorial = 1;
@@ -47,7 +52,7 @@ for (let i = 1; i <= n; i++) {
 }
 console.log(factorial);
 
-// que 5
+// Qs5. Find the largest number in an array with only positive numbers.
 
 let arr1 = [2, 5, 23, 4, 10, 5, 7];
 let largest = 0;
