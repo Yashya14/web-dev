@@ -2,13 +2,13 @@
 //     console.log(i);
 // }
 
-// odd number between 0 to 15
+//! odd number between 0 to 15
 
 // for(let i = 0;i<=15;i = i+1){5
 //     console.log(i);
 // }
 
-// multiplication table
+//! Multiplication table
 // let number = prompt("Please enter a number ");
 // number = parseInt(number);
 
@@ -23,7 +23,6 @@
 //   }
 // }
 
-
 // let a = 1;
 
 // while(a <= 10){
@@ -31,10 +30,43 @@
 //     a++;
 // }
 
-let heros = [["superman","spiderman"],["batman","groot","ironman","hulk"]];
+// let heros = [
+//   ["superman", "spiderman"],
+//   ["batman", "groot", "ironman", "hulk"],
+// ];
 
-for(hero of heros){
-    for(items of hero){
-        console.log(items);
-    }
-}
+// for (hero of heros) {
+//   for (items of hero) {
+//     console.log(items);
+//   }
+// }
+
+// Todo App
+
+// let todo = [];
+
+// let req = prompt("Please enter your request");
+
+// while (true) {
+//   if (req == "quit") {
+//     console.log("Quiting App");
+//     break;
+//   }
+
+//   if (req == "list") {
+//     console.log("------------");
+//     for (task of todo) {
+//       console.log(task);
+//     }
+//     console.log("------------");
+//   } else if (req == "add") {
+//     let task = prompt("Please enter task you want to add");
+//     todo.push(task);
+//     console.log("Task added");
+//   } else if (req == "delete") {
+//     let idx = prompt("enter index task");
+//     todo.splice(idx, 1);
+//     console.log("Task deleted");
+//   }
+//   req = prompt("Please enter your request");
+// }
