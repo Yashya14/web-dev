@@ -19,3 +19,10 @@ function table(n){
 }
 
 table(2);
+
+function subtract(a,b){
+    return a - b;
+}
+
+let result = subtract(5,2);
+console.log(result);
