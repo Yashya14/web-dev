@@ -100,7 +100,6 @@ console.log(longestName(country));
 
 //! Qs4. Write a JavaScript function to count the number of vowels in a String argument.
 
-
 let str2 = "apnacollege";
 function countVowels(str) {
   let count = 0;
@@ -125,9 +124,62 @@ console.log(countVowels(str2));
 // let start = 100;
 // let end = 200;
 function generateRandom(start, end) {
-    let diff = end-start;
-    let result  = Math.floor(Math.random() * diff) + start;
-    return result;
+  let diff = end - start;
+  let result = Math.floor(Math.random() * diff) + start;
+  return result;
 }
 
 console.log(generateRandom(1, 10));
+
+//! Arrow function practice question.
+
+let arrs = [1, 3, 4, 2, 6, 5];
+
+const arrayAverage = (arr) => {
+  let total = 0;
+  for (let number of arr) {
+    total += number;
+  }
+  return total / arr.length;
+};
+
+console.log(arrayAverage(arrs));
+
+//? question 2
+const isEven = (n) => {
+  if(n % 2 == 0){
+    return "Even";
+  }else{
+    return "odd";
+  }
+  
+};
+
+console.log(isEven(30));
+
+const object = {
+  message : 'hello world',
+  logMessage(){
+    console.log(this.message);
+  }
+};
+
+setTimeout(object.logMessage,1000); // undefined
+
+
+let length = 4;
+
+function callback(){
+  console.log(this.length);
+}
+
+const onject1 = {
+  length : 5,
+  method(callback){
+    callback();
+  },
+
+};
+
+object.method(callback,1,2);
+
