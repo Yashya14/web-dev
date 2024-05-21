@@ -181,5 +181,6 @@ const onject1 = {
 
 };
 
-object.method(callback,1,2);
+object.method(callback,1,2); // TypeError: object.method is not a function
+
 
