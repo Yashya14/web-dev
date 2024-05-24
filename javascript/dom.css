@@ -2,3 +2,20 @@
     background-color: blue;
     color:white;
 }
+
+div{
+    width: 500px;
+    height: 100px;
+    background-color: rgb(5, 156, 226);
+}
+
+ul{
+    background-color: cadetblue;
+    height: 50px;
+    width: 100px;
+    list-style: none;
+}
+
+li{
+    background-color: blueviolet;
+}
