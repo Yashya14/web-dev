@@ -39,3 +39,24 @@ let para = document.createElement("p");
 para.innerHTML = "<b>DOM</b> practice question";
 
 document.querySelector("body").append(para);
+
+
+// event bublling
+
+let div = document.querySelector("div");
+let ul = document.querySelector("ul");
+let li = document.querySelector("li");
+
+div.addEventListener("click",function(e) {
+    console.log("div clicked");
+});
+
+ul.addEventListener("click",function(e) {
+    e.stopPropagation();
+    console.log("ul clicked");
+});
+
+li.addEventListener("click",function(e) {
+    e.stopPropagation();
+    console.log("list clicked");
+});
