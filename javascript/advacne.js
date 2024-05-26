@@ -53,3 +53,6 @@ saveDb()
   .catch(() => {
     console.log("Promise rejected");
   });
+
+
+  // then() & catch() - > js object
