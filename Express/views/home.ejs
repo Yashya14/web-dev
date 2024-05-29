@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejs template</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: rgb(73, 69, 69);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This is my first express project <%= 5 + 5 %></h1>
+    <h2>Dice value : <%= value %></h2>
+
+    <!-- conditonal statements in ejs  -->
+    <% if(value == 6) {%>
+    <h3>Nice! Roll dice again.</h3>
+    <% } %>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem deserunt
+      porro ex. Earum dolor animi, maiores est alias aperiam temporibus at
+      asperiores voluptas quos rem, corrupti nam reprehenderit cupiditate
+      veritatis!
+    </p>
+    <button>Click Me</button>
+  </body>
+</html>
