@@ -1,0 +1,12 @@
+{
+    "cats" : {
+        "name" : "cats",
+        "followers" : 25000,
+        "following" : 5
+    },
+    "dogs" : {
+        "name" : "dogs",
+        "followers" : 2300,
+        "following" : 3
+    }
+}

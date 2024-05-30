@@ -6,15 +6,16 @@
     <title>Instagram</title>
   </head>
   <body>
-    <h1>This page is belongs to @<%= username %></h1>
+    <h1>This page is belongs to @<%= data.name %></h1>
     <button>Follow</button>
     <button>Message</button>
 
-    <h2>Followers :</h2>
-    <ul>
-      <% for(let name of followers){ %>
-      <li><%= name %></li>
-      <% } %>
-    </ul>
+    <h3>
+      Followers : <%= data.followers %> &nbsp;&nbsp;&nbsp;&nbsp; Following : <%=
+      data.following %>
+    </h3>
+
+    <!-- subtemplate  -->
+    <%- include("./footer.ejs") %>
   </body>
 </html>

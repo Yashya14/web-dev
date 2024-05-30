@@ -12,10 +12,22 @@ app.get("/", (req, res) => {
   res.render("home.ejs",{value:dicevalue});
 });
 
-let followers = ["John", "shyam", "rajat"];
+// let followers = ["John", "shyam", "rajat"];
+// app.get("/ig/:username", (req, res) => {
+//   let {username} = req.params;
+//   res.render("instagram.ejs",{username,followers});
+// })
+
 app.get("/ig/:username", (req, res) => {
   let {username} = req.params;
-  res.render("instagram.ejs",{username,followers});
+  const instaData = require("./data.json");
+  const data = instaData[username];
+  if(data){
+    res.render("instagram.ejs",{data});
+  }else{
+    res.render("error.ejs");
+  }
+
 })
 
 // app.get('/', (req, res) => {
