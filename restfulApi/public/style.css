@@ -1,0 +1,15 @@
+body{
+    background-color: rgb(149, 134, 134);
+    color: black;
+}
+h1{
+    color: maroon;
+}
+
+.post{
+    background-color: blanchedalmond;
+}
+
+.user{
+    font-style: italic;
+}
