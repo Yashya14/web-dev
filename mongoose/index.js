@@ -21,9 +21,9 @@ const userSchema = new mongoose.Schema({
 const User = mongoose.model("User", userSchema);
 
 // const user1 = new User({
-//     name : "Eve",
-//     age : 21,
-//     email : "EVE@gmail.com"
+//     name : "jenny",
+//     age : 24,
+//     email : "jen@gmail.com"
 // });
 
 // user1.save(); // async function
@@ -56,8 +56,22 @@ const User = mongoose.model("User", userSchema);
 // });
 
 // {new : true } -> returns modified data
-User.findByIdAndUpdate("6665e6446ecbcc7a79eac25b",{email : "adam@google.in"},{new : true}).then((data) => {
-  console.log(data);
+// User.findByIdAndUpdate("6665e6446ecbcc7a79eac25b",{email : "adam@google.in"},{new : true}).then((data) => {
+//   console.log(data);
+// });
+
+// User.deleteOne({email : "eve@google.in"}).then((data) => {
+//     console.log(data);
+// })
+
+// User.deleteMany({age : {$gt : 20}}).then((data) => {
+//     console.log(data);
+// })
+
+// User.findOneAndDelete({name : "Eve"}).then((data) => {console.log(data)});
+
+User.findByIdAndDelete("6665f02392bc5867468ba54c").then((res) => {
+  console.log(res);
 });
 
 app.get("/", (req, res) => {
