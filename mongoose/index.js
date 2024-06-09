@@ -18,7 +18,7 @@ const userSchema = new mongoose.Schema({
   email: String,
 });
 
-const User = mongoose.model("User",userSchema);
+const User = mongoose.model("User", userSchema);
 
 // const user1 = new User({
 //     name : "Eve",
@@ -36,12 +36,28 @@ const User = mongoose.model("User",userSchema);
 //     console.log(data);
 // });
 
-// User.find().then((data) => { 
+// User.find().then((data) => {
 //     console.log(data);
 // });
 
-User.findById("6665e6446ecbcc7a79eac25b").then((data) => {
-    console.log(data);
+// User.findById("6665e6446ecbcc7a79eac25b").then((data) => {
+//     console.log(data);
+// });
+
+// User.updateOne({ name: "Eve" }, { age: 34 }).then((data) => {
+//   console.log(data);
+// });
+// User.updateMany({age : { $gt: 22 }},{email : "user@google.in"}).then((data) => {
+//   console.log(data);
+// });
+
+// User.findOneAndUpdate({age : 34},{email : "eve@google.in"}).then((data) => {
+//   console.log(data);
+// });
+
+// {new : true } -> returns modified data
+User.findByIdAndUpdate("6665e6446ecbcc7a79eac25b",{email : "adam@google.in"},{new : true}).then((data) => {
+  console.log(data);
 });
 
 app.get("/", (req, res) => {
