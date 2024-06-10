@@ -38,13 +38,13 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model("User", userSchema);
 
-const user1 = new User({
-    name : "ram",
-    age : 14,
-    email : "ram@gmail.com"
-});
+// const user1 = new User({
+//     name : "ram",
+//     age : 14,
+//     email : "ram@gmail.com"
+// });
 
-user1.save(); // async function
+// user1.save(); // async function
 
 // User.findOne().then((data) => {
 //     console.log(data);
@@ -65,6 +65,7 @@ user1.save(); // async function
 // User.updateOne({ name: "Eve" }, { age: 34 }).then((data) => {
 //   console.log(data);
 // });
+
 // User.updateMany({age : { $gt: 22 }},{email : "user@google.in"}).then((data) => {
 //   console.log(data);
 // });
