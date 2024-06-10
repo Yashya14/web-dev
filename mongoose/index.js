@@ -5,28 +5,46 @@ const port = 8080;
 
 main()
   .then(() => console.log("Mongodb connected successfully"))
-  .catch((err) => console.log(err));
+  .catch((err) => console.log("not connected"));
 
 async function main() {
   await mongoose.connect("mongodb://127.0.0.1:27017/test");
 }
 
 // A schema defines the structure of your collection documents. A Mongoose schema maps directly to a MongoDB collection.
+// const userSchema = new mongoose.Schema({
+//   name: String,
+//   age: Number,
+//   email: String,
+// });
+
+
 const userSchema = new mongoose.Schema({
-  name: String,
-  age: Number,
-  email: String,
+  name: {
+    type : String,
+    required: true,
+    maxLength : 50
+  },
+  age: {
+    type : Number,
+    min : 1
+  },
+  email: {
+    type : String,
+    unique : true
+  },
+
 });
 
 const User = mongoose.model("User", userSchema);
 
-// const user1 = new User({
-//     name : "jenny",
-//     age : 24,
-//     email : "jen@gmail.com"
-// });
+const user1 = new User({
+    name : "ram",
+    age : 14,
+    email : "ram@gmail.com"
+});
 
-// user1.save(); // async function
+user1.save(); // async function
 
 // User.findOne().then((data) => {
 //     console.log(data);
@@ -70,9 +88,9 @@ const User = mongoose.model("User", userSchema);
 
 // User.findOneAndDelete({name : "Eve"}).then((data) => {console.log(data)});
 
-User.findByIdAndDelete("6665f02392bc5867468ba54c").then((res) => {
-  console.log(res);
-});
+// User.findByIdAndDelete("6665f02392bc5867468ba54c").then((res) => {
+//   console.log(res);
+// });
 
 app.get("/", (req, res) => {
   res.send("Welcome to Express.JS");
