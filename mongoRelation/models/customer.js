@@ -24,6 +24,19 @@ const customerSchema = new Schema({
   ],
 });
 
+// customerSchema.pre("findOneAndDelete",async() => {
+//   console.log("pre middleware");
+// })
+
+
+customerSchema.post("findOneAndDelete", async (customer) => {
+  if (customer.orders.length) {
+    let res = await Order.deleteMany({ _id: { $in: customer.orders } });
+    console.log(res);
+  }
+  console.log("pre middleware");
+});
+
 const Order = mongoose.model("Order", orderSchema);
 const Customer = mongoose.model("Customer", customerSchema);
 
@@ -31,20 +44,51 @@ const Customer = mongoose.model("Customer", customerSchema);
 
 //? Populated paths are no longer set to their original _id , their value is replaced with the mongoose document returned from the database by performing a separate query before returning the results
 
-const findCustomer = async () => {
-  let result = await Customer.find({}).populate("orders");
-  console.log(result[0]);
+// const findCustomer = async () => {
+//   let result = await Customer.find({}).populate("orders");
+//   console.log(result[0]);
+// };
+
+// findCustomer();
+
+//? to add a new customer with their orders
+// const addCust = async () => {
+//   let newCust = new Customer({
+//     name: "karan",
+//   });
+
+//   let newOrder = new Order({
+//     item: "pizza",
+//     price: 300,
+//   });
+
+//   newCust.orders.push(newOrder);
+
+//   await newOrder.save();
+//   await newCust.save();
+
+//   console.log("Added new  customer");
+// };
+
+// addCust();
+
+//? delete customer with their orders
+const delCust = async () => {
+  let data = await Customer.findByIdAndDelete("666c4385471716f07b1bf514");
+  console.log(data);
 };
 
-findCustomer();
+delCust();
+
+
 
 // const addCustomer = async () => {
 //   let cust1 = new Customer({
-//     name: "Raju",
+//     name: "rahul",
 //   });
 
-//   let order1 = await Order.findOne({item : "chips"});
-//   let order2 = await Order.findOne({item : "chocolate"});
+//   let order1 = await Order.findOne({item : "cold drink"});
+//   let order2 = await Order.findOne({item : "mango"});
 
 //   cust1.orders.push(order1);
 //   cust1.orders.push(order2);
@@ -57,9 +101,9 @@ findCustomer();
 
 // const addOrder = async() => {
 //     let res = await Order.insertMany([
-//         {item: "chips",price : 10},
-//         {item: "samosa",price : 20},
-//         {item: "chocolate",price : 40},
+//         {item: "cold drink",price : 10},
+//         {item: "mango",price : 20},
+
 //     ]);
 //     console.log(res);
 // };
